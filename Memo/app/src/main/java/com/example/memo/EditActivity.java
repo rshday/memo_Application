@@ -126,8 +126,8 @@ public class EditActivity extends AppCompatActivity {
                 obj.put("contents",edit_contents.getText());
                 arr.put(obj);
                 List<String> byteimgs = new ArrayList<>();
-                ByteArrayOutputStream bao = new ByteArrayOutputStream();
                 for(Bitmap b : img_array){
+                    ByteArrayOutputStream bao = new ByteArrayOutputStream();
                     b.compress(Bitmap.CompressFormat.JPEG,100,bao);
                     byte[] temp = bao.toByteArray();
                     String str = Base64.encodeToString(temp,Base64.DEFAULT);
